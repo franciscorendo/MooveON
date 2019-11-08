@@ -5,6 +5,7 @@
     <title>MoviON</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/uikit.min.css"/>
 </head>
   <body>
     <div class="topnav"> <!-- aca aparece el nombre del usuario solo si se registra-->
@@ -15,11 +16,83 @@
       <div class="navMenu">
         <a href="home.html" id='home'>Home</a>
         <a href="generos.html">Genre</a>
-        <a href="generos.html#movies">Movies</a>
+        <a href="generos.html#movies">Movies</a><!--que es  el # de movies-->
         <a href="buscador.html">Search</a>
         <a class="favorite" style="display:none" href="favoritos.html">Favorites</a>
         </div>
+
+        <div class="login"> <!--dentro del div esta el link para logearse y el buscador-->
+          <span id="user2">
+          <i class="fas fa-user"></i>
+          <p style="display: none; font-size: 20px;"></p>
+        </span>
+
+        <div id= "searchbar" class="uk-navbar-right">
+          <a class="ul-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle></a>
+
+        </div>
+
+        <div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+          <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+            <button class="uk-modal-close-full" type="button" uk-close></button>
+            <form class="uk-search uk-search-large" action="buscador.html" method="get">
+              <input class="uk-search-input uk-text-center" type="search" placeholder="Search..." autofocus="busqueda"> <!--de que me hablas franquet con placeholder-->
+              </form>
+            </div>
+          </div>
+          <span id="hamburguer">
+            <i class=" fas fa-bars"></i> <!--explicar esto franquet-->
+          </span>
+        </div>
     </header>
+    <div class="responsivo">
+      <div class="cerrar">
+        + <!--porque un +-->
+        </div>
+        <a href="home.html">Home</a> <!-- Link para Home-->
+        <a href="generos.html">Genres</a> <!--Link para Generos-->
+        <a href="generos.html#movies">Movies</a> <!--Link a Peliculas-->
+        <a href="buscador.html">Search</a> <!--Link a Busqueda-->
+        <a href="favorite1" style="display: none;" href="#">Your Favorites</a> <!--Link a Favs-->
+        </div>
+        <div class="bg-modal">
+          <div class="modal-content">
+            <div class="close">
+              +
+          </div>
+          <span style="font-size: 5rem">
+            <i class= "far fa-user"></i>
+          </span>
+          <p>Log In</p>
+
+          <form id="formlogin" action="">
+
+            <div class="uk-margin">
+              <div class="uk-inline uk-width-2-3">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="text" id="name">
+              </div>
+            </div>
+            <div class="uk-margin">
+              <div class="uk-inline uk-width-2-3">
+                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                <input class="uk-input" type="text" id="email">
+                </div>
+              </div>
+              <div class="uk-margin">
+                <div class="uk-inline uk-width-2-3">
+                  <select class="uk-select" id="genero">
+                    <optio>Male</option>
+                    <option>Female</option>
+                    <option>Undefined</option>
+                  </select>
+                </div>
+                </div>
+            <button type="submit" name="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      
 <script src="./js/home.js">
 
 </script>
