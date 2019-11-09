@@ -2,23 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>MoviON</title>
+    <title>SeriON</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="/css/uikit.min.css"/>
 </head>
   <body>
-    <div class="topnav"> <!-- aca aparece el nombre del usuario solo si se registra-->
+    <div class="topnav"> <!-- aca aparece el nombre del usuario SOLO si se registra-->
 
     </div>
     <!--header-->
-    <header>
-        <div class="navMenu">
-        <a href="home.html" id='home'>Home</a>
-        <a href="generos.html">Genres</a>
-        <a href="generos.html#movies">Tv Series</a><!--que es  el # de movies-->
-        <a href="buscador.html">Search</a>
-        <a class="favorite" style="display:none" href="favoritos.html">Favorites</a>
+    <header><!--Header + Logo + Menues para navegar-->
+        <div class="navMenu"> <!--dentro del div va el logo-->
+          <img src="./IMG/logo.jpg" alt=""><!--la imagen del logo-->
+        <a href="home.html" id='home'>Home</a><!--link a Home-->
+        <a href="generos.html">Genres</a><!--link a Generos-->
+        <a href="generos.html#movies">Tv Series</a><!--que es  el # de movies--><!--link a Series-->
+        <a href="buscador.html">Search</a><!--link a Buscador-->
+        <a class="favorite" style="display:none" href="favoritos.html">Favorites</a><!--link a Favs-->
         </div>
 
 
@@ -43,8 +44,9 @@
               </form>
             </div>
           </div>
+
           <span id="hamburguer">
-            <i class=" fas fa-bars"></i> <!--explicar esto franquet-->
+            <i class="fas fa-bars"></i> <!--explicar esto franquet-->
           </span>
         </div>
     </header>
@@ -58,6 +60,7 @@
         <a href="buscador.html">Search</a> <!--Link a Busqueda-->
         <a href="favorite1" style="display: none;" href="#">Your Favorites</a> <!--Link a Favs-->
         </div>
+
         <div class="bg-modal">
           <div class="modal-content">
             <div class="close">
@@ -76,14 +79,17 @@
                 <input class="uk-input" type="text" id="name">
               </div>
             </div>
+
             <div class="uk-margin">
               <div class="uk-inline uk-width-2-3">
                 <span class="uk-form-icon" uk-icon="icon: mail"></span>
                 <input class="uk-input" type="text" id="email">
                 </div>
               </div>
+
               <div class="uk-margin">
                 <div class="uk-inline uk-width-2-3">
+
                   <select class="uk-select" id="genero">
                     <option>Male</option>
                     <option>Female</option>
@@ -91,13 +97,85 @@
                   </select>
                 </div>
                 </div>
+
             <button type="submit" name="button">Subscribe</button>
+
           </form>
         </div>
       </div>
+      <div class="paginalogout">
+        <div class="boxlogout">
+          <img src="/IMG/sadimage.png" alt="">
+          <p>Are you sure you want to log out?</p>
+          <div class="botoneslogout">
+            <button id="yesbutton" type="input" name="button">Yes</button>
+            <button id="nobutton" type="input" name="button">No</button>
+          </div>
+        </div>
+      </div>
 
-<script src="./js/home.js">
+      <!--HEADER-->
+      <div class="banner"> <!--Foto del banner de las series-->
+        <h1>All The Latest TV Series on SeriON</h1> <!--titulo de Home-->
+        <button id="user" type="button" name="button">SUBSCRIBE</button> <!-- Boton para Suscribirse-->
+        <a href="terminos.html" target="_blank">Accept Terms of Use...</a><!--T&C-->
+        <p>Scroll for more</p>
 
-</script>
+        <a class="uk-botton uk-botton-primary" style="background-color: rgba(0,0,0,0); margin-top: 10vh;" href="#postal" offset='100' uk-scroll><img src="/IMG/series.jpg" alt=""></a>
+        </div>
+
+        <h1 style="margin-top: 4rem;">Most Popular</h1>
+
+        <div class="uk-position-relativeuk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+          <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid-small contenedor-populares">
+
+          </ul>
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+
+        <h1>Most Rated</h1>
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid-small contenedor-puntaje">
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+        <h1>New Releases</h1>
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+              <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid-small contenedor-proximamente">
+
+
+              </ul>
+
+              <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+          </div>
+        </div>
+<!--Footer-->
+        <div class="footer">
+  <img src="/IMG/DMBlogo.png" alt="">
+  <div>
+    <p style="margin-bottom:0;">Cami de Paul, Fran Rendo y Fini Quirno</p>
+  </div>
+  <button id="logoutbutton">Log Out</button>
+</div>
+<!--Footer-->
+
+<script src="./js/uikit.min.js"></script>
+<script src="./js/uikit-icons.min.js"></script>
+<script src="./js/uikit-icons.js"></script>
+<script src="./js/uikit.js"></script>
+<script rel="stylesheet" src="./js/home.js"></script>
+<script src="./js/login.js" charset="utf-8"></script>
+
+
   </body>
 </html>
