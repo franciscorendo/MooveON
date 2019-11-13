@@ -17,7 +17,7 @@ window.onload = function(){
           <li>
               <div class="uk-panel">
                   <img src="https://image.tmdb.org/t/p/original`+serie.poster_path+`" alt="">
-                  <div class="uk-position-center uk-panel"><h2>`+serie.name+`</h2></div>
+
               </div>
           </li>
         </a>
@@ -47,7 +47,7 @@ window.onload = function(){
           <li>
               <div class="uk-panel">
                   <img src="https://image.tmdb.org/t/p/original`+serie.poster_path+`" alt="">
-                  <div class="uk-position-center uk-panel"><h2>`+serie.name+`</h2></div>
+
               </div>
           </li>
         </a>
@@ -74,7 +74,7 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=a3f9467ae2c29b7ede89cca
       <li>
           <div class="uk-panel">
               <img src="https://image.tmdb.org/t/p/original`+serie.poster_path+`" alt="">
-              <div class="uk-position-center uk-panel"><h2>`+serie.name+`</h2></div>
+            
           </div>
       </li>
     </a>

@@ -62,27 +62,31 @@ header{
 .Series{
   text-align: center;
   margin-top: 10px;
+  justify-content: space-between;
 }
 
 .sliders{
 
-  background-image: linear-gradient(#B9C5D0,rgba(0,0,0,0),#B9C5D0);
+  background-color: white;
+
+
 }
 
 footer{
   width: 100%;
-  color: green;
+  color: #0C2440;
   height: 80px;
   display: flex;
-  background-color: black;
+  background-color: white;
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
+  border-top: 2px solid #0C2440;
 }
 .sliders h1{
   font-family: sans-serif;
   color: #0E447A;
   font-size: 2em;
-  font-weight: bold;
-
+  font-weight: lighter;
+margin-top: 10px;
 }
