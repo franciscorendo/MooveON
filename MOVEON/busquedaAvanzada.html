@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Buscador Avanzado</title>
+<!--UIkit JS-->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/uikit.min.css">
+    <link rel="stylesheet" href="./js/uikit.min.js">
+    <link rel="stylesheet" href="./js/uikit-icons.js">
+    <!--UIkit JS-->
+  </head>
+  <body>
+    <!-- Buscador Avanzado-->
+    <div class="buscadorAvanzado">
+      <h3> Busqueda avanzada </h3>
+      <form class="form-avanzado" action="resultadoavanzado.html" method="get">
+        <p class="busqueda"> Genero: </p>
+        <select class="opcionesGenero" name="genero">
+          <option value=""></option>
+        </select>
+        <br><p class="busqueda"> Excluir: </p>
+        <select class="excluir" name="excluir">
+          <option value=""></option>
+        </select>
+        <br> <p class="busqueda"> Ordenar por: </p>
+        <select class="orden" name="orden">
+          <option value=""></option>
+
+          <option value=""> Mas Votados desc. </option>
+          <option value=""> Mas votados asc. </option>
+          <option value=""> Fecha de estreno desc. </option>
+          <option value=""> Fecha de estreno asc. </option>
+          <option value=""> Popularidad desc. </option>
+          <option value=""> Popularidad asc. </option>
+        </select>
+        <br> <p> Año de estreno: </p>
+        <input type="number" name="year" value="">
+        <button type="submit" name="buscar">Buscar</button>
+      </form>
+    </div>
+    <!--Buscador Avanzado-->
+  </body>
+  <script rel="stylesheet" src="./js/busquedaAvanzada.js"></script>
+</html>
