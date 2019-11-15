@@ -1,5 +1,5 @@
 window.addEventListner("load", function(){
-  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=a3f9467ae2c29b7ede89cca0ca14d893&language=en-US&page=1")
+  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=a3f9467ae2c29b7ede89cca0ca14d893&language=en-US")
   .then(function(response) {
     return response.json();
   })
@@ -7,9 +7,10 @@ window.addEventListner("load", function(){
     var series = respuesta.generes;
     for(var i=0; i < series.length; i++){
       document.querySelector("select.opcionesGenero").innerHTML += "<option value" + series[i].id + ">" + series[i].name + "</option>"
-      document.querySelector("select.incluir").innerHTML += "<option value=" + series[i].id + ">" + series[i].name + "<option>"
+      document.querySelector("select.excluir").innerHTML += "<option value=" + series[i].id + ">" + series[i].name + "<option>"
     }
   })
+// Agregar ordenar por parrafos
 
   var query = new URLSearchParams (location.search)
 
@@ -41,7 +42,7 @@ window.addEventListner("load", function(){
     year = ""
   }
 
-  fetch("https://api.themoviedb.org/3/discover/tv?api_key=a3f9467ae2c29b7ede89cca0ca14d893&language=en-US&page=1" + genero + excluir + orden + year)
+  fetch("https://api.themoviedb.org/3/discover/tv?api_key=a3f9467ae2c29b7ede89cca0ca14d893" + genero + excluir + orden + year)
   .then(function(response){
     return response.json();
   })
