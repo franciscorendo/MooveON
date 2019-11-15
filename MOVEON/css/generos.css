@@ -42,3 +42,19 @@ footer{
     align-items: center;
     margin-top: 10px;
     border-top: 2px solid #0C2440;
+}
+
+.generos-lista {
+  position: relative;
+  display: flex;
+}
+
+.generos-lista div {
+  width: 20%;
+}
+
+
+
+.generos-lista div a img{
+  height: 375px;
+}
