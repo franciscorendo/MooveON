@@ -1,0 +1,44 @@
+body{
+  margin: 0px;
+}
+
+header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0C2440;
+  position: fixed;
+  background-color: white;
+  z-index: 3;
+}
+
+.logo img{
+  max-width: 75px;
+}
+
+.logo{
+  margin-left: 40px;
+}
+
+.links{
+  margin-right: 50px;
+}
+
+.links a{
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+footer{
+    width: 100%;
+    color: #0C2440;
+    height: 80px;
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 2px solid #0C2440;
