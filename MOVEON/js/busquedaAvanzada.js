@@ -14,7 +14,7 @@ window.addEventListner("load", function(){
 
   var query = new URLSearchParams (location.search)
 
-  var genero = queery.get('genero')
+  var genero = query.get('genero')
   if(genero != null){
     genero = '&with_genres' + genero
   }else{

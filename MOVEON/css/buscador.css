@@ -1,0 +1,154 @@
+p {
+  font-weight: lighter;
+}
+
+.titulo h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 60px;
+  font-weight: lighter;
+  margin-bottom: 0%;
+  margin-top: 110px;
+}
+
+.titulo p{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.contenedorPadre{
+  width: 80%;
+}
+
+.uk-navbar-left{
+  width: 100%;
+}
+
+.uk-navbar-item{
+  width: 100%;
+}
+
+.uk-search-navbar{
+  width: 100% !important;
+}
+
+.searchbutton{
+  position: absolute;
+  right: 0;
+width: 100px;
+height: 100%;
+background-color: rgba(248, 248, 248, 1);
+border: none;
+top:0;
+}
+
+.posterSerie{
+  width: 100%;
+}
+
+.infoDeSerie ul{
+  width: 100%;
+}
+
+/*.contenedorPadre{
+  width: 80%;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.buscador {
+  display: flex;
+  margin-top: 0px;
+  width: 93%;
+  background-color: rgba(248, 248, 248, 1);
+}
+
+.uk-navbar-container {
+  align-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.uk-navbar-left {
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.uk-navbar-item{
+  margin: 0px;
+  width: 100%;
+  background-color: rgba(248, 248, 248, 1);
+}
+
+.uk-navbar-container.uk-navbar {
+  margin-left: 0%;
+  margin-top: 0%;
+  margin-right: 0%;
+  width: 100%;
+}
+
+.buttonSearch {
+  margin-top: 0px;
+  width: 20%;
+}
+
+.searchbutton{
+  background-color: rgba(248, 248, 248, 1);
+  border: none;
+  position: absolute;
+  right: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+} */
+
+button {
+padding: 0%;
+margin-top: 0%;
+font:sans-serif;
+font-size: 80%;
+font-weight: lighter;
+font
+}
+
+.series{
+  width: 80%;
+  display: flex;
+  margin-top: 50px;
+  padding: 0px;
+  height: 80vh;
+  justify-content: space-between;
+}
+
+.series ul{
+  width: 100%;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  height: 80vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.series ul li{
+  width: 33%;
+}
+
+.series ul p{
+  display: none;
+}
+
+.series img{
+  max-height: 50vh;
+  margin-bottom: 30px;
+}
+
+
+/*input.uk-search-input {
+  width: 620px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+}*/
