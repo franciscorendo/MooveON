@@ -92,22 +92,15 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=a3f9467ae2c29b7ede89cc
   return  response.json();
 })
 .then(function(data){
-  var array = data.results
-  var ul = document.querySelector()
-  console.log(array)
-  for (serie of array) {
-    var li = `
-   <a href="TUDETALLEDESERIE*">
-      <li>
-          <div class="uk-panel">
-              <img src="https://image.tmdb.org/t/p/original`+serie.poster_path+`" alt="">
+  console.log(data)
+  var id= data.id
+  var ul = document.querySelector('.generos')
+  for (var genero of data.genres) {
 
-          </div>
-      </li>
-    </a>
-    `
-    ul.innerHTML += li;
+    ul.innerHTML += `<li><a href="series.html?idDeGenero=${genero.id}&nombreDeGenero=&${genero.name}">`+ genero.name + `</a></li>`;
   }
+
+
 
 })
 .catch(function(error){
