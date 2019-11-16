@@ -51,7 +51,48 @@ border: 1px solid gray;
   color:white;
     height: 8vh;
 }
+.posterSerie img{
+  min-width: 80%;
+  min-height: 60vh;
+}
 
+.infoDeSerie iframe{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+
+  div.posterSerie {
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+div.infoDeSerie {
+  justify-content: space-around;
+  align-items: center;
+  width: 59.2%;
+  height: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info{
+  background-color: rgba(248, 248, 248);
+  width:80%;
+}
+
+ul{
+  width: 80%;
+}
 
 
 /* estilos del body */
