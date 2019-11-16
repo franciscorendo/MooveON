@@ -18,19 +18,41 @@
   </head>
   <body>
     <!--Esta es la Barra de Navegacion-->
-    <header>
-      <div class="logo">
-        <img src="./img/serionlogo.jpg" alt="">
-      </div>
-      <div class="links">
-        <a href="home.html">Home</a>
-        <a href="generos.html">Generos</a>
-        <a href="series.html">Series</a>
-        <a href="favoritos.html">Favoritos</a>
-        <a href="busquedaAvanzada.html">Buscador</a>
-        <a href="#">Log In</a>
-      </div>
-    </header>
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="contenedorTitulos">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="home.html"><img class="nav-logo" src="./img/serionlogo.jpg"></a></li>
+            </ul>
+        </div>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+              <li class="li-line">
+                <a class="li-a" href="home.html">Home</a>
+              </li>
+                <li  class="li-line">
+                    <a class="li-a" href="#">Generos</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav gen">
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-line">
+                  <a class="li-a" href="favoritos.html">Favoritos</a>
+                </li>
+                <li class="li-line">
+                  <a class="li-a" href="busquedaAvanzada.html">Buscador Avanzado</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contenedorBuscador">
+          <form method="get" name="buscar" action="buscador.html" class="buscar">
+                <input class="uk-search-input casillero" name="buscador" type="search" placeholder="Search...">
+                <span class="iconoBuscador" uk-search-icon></span>
+            </form>
+        </div>
+        </div>
+    </nav>
     <!--FIN de la Barra de Navegacion-->
     <br><br><br><br>
     <!-- Buscador Avanzado-->

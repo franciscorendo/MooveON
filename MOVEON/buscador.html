@@ -2,71 +2,72 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Buscador</title>
-<!--UIkit CSS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
-
+         <script rel="stylesheet" src="./js/buscador2.js"></script>
+         <link rel="stylesheet" href="./css/buscador.css">
+         <link rel="stylesheet" href="./css/home.css">
+         <link rel="stylesheet" href="./css/uikit.min.css">
+    <!--UIkit CSS-->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"/>
     <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="./css/uikit.min.css">
-    <link rel="stylesheet" href="./js/uikit.min.js">
-    <link rel="stylesheet" href="./js/uikit-icons.js">
-    <link rel="stylesheet" href="./css/buscador.css">
-  </head>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="./js/uikit.min.js">
+        <link rel="stylesheet" href="./js/uikit-icons.js">
+
+       <title>Buscador</title>
+    </head>
   <body>
-    <!-- Esta es la barra de navegacion -->
-    <header>
-      <div class="logo">
-        <img src="./img/serionlogo.jpg" alt="">
-      </div>
-      <div class="links">
 
-        <a href="home.html">Home</a>
-        <a href="generos.html">Generos</a>
-        <a href="series.html">Series</a>
-        <a href="favoritos.html">Favoritos</a>
-        <a href="buscador.html">Buscador</a>
-        <a href="#">Log In</a>
-      </div>
-    </header>
-    <!-- FIN de Barra de Navegacion -->
-
-
-    <div class="titulo">
-  <h1>Buscar</h1>
-  <p> Sus resultados seran vistos aquí... </p>
-</div>
-
-<div class="contenedorPadre">
-  <div class="buscador">
 
     <nav class="uk-navbar-container" uk-navbar>
+      <div class="contenedorTitulos">
         <div class="uk-navbar-left">
-            <div class="uk-navbar-item">
-                <form method="GET" action="buscador.html" class="uk-search uk-search-navbar">
-                    <span uk-search-icon></span>
-                    <input class="uk-search-input busqueda" type="search" placeholder="" name="busqueda">
-                    <!-- <button type="submit" name="button">Buscar</button> -->
-
-                    <button class="searchbutton" type="submit" name="button">Search</button>
-                </form>
-            </div>
+            <ul class="uk-navbar-nav">
+                <li class="uk-active"><a href="home.html"><img class="nav-logo" src="./img/serionlogo.jpg"></a></li>
+            </ul>
+        </div>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+              <li class="li-line">
+                <a class="li-a" href="home.html">Home</a>
+              </li>
+                <li  class="li-line">
+                    <a class="li-a" href="#">Generos</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav gen">
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-line">
+                  <a class="li-a" href="favoritos.html">Favoritos</a>
+                </li>
+                <li class="li-line">
+                  <a class="li-a" href="busquedaAvanzada.html">Buscador Avanzado</a>
+                </li>
+            </ul>
+        </div>
+        <div class="contenedorBuscador">
+          <form method="get" name="buscar" action="buscador.html" class="buscar">
+                <input class="uk-search-input casillero" name="buscador" type="search" placeholder="Search...">
+                <span class="iconoBuscador" uk-search-icon></span>
+            </form>
+        </div>
         </div>
     </nav>
 
   </div>
 </div>
 
-<div class="series">
-  <div class="posterSerie">
-    <ul> </ul>
-  </div>
-  <div class="infoDeSerie">
-    <ul> </ul>
-  </div>
-</div>
+
+<div id="main">
+   <div class="">
+     <p class="prox"></p>
+   </div>
+ <div class="fotoswrap">
+   <ul class="ul-fotos">
+   </ul>
+ </div>
+
 <!--Footer-->
     <footer>
       <div class="logo">
@@ -79,7 +80,9 @@
 
     </footer>
     <!--Fin de Footer-->
-    <script rel="stylesheet" src="./js/home.js"></script>
-    <script rel="stylesheet" src="./js/buscador.js"></script>
+
+
+
+
   </body>
 </html>
