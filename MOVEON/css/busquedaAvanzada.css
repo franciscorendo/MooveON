@@ -1,11 +1,4 @@
-body{
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
-}
 /* header navegador */
 .contenedorTitulos{
   width: 100%;
@@ -57,6 +50,38 @@ border: 1px solid gray;
   color:white;
     height: 8vh;
 }
+/*VER ESTO*/
+.buscadorAvanzado h3{
+  font-family: sans-serif;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  align-content: center;
+}
+/*#C4CBD2*/
+.form-avanzado p{
+  font-family: sans-serif;
+  color: white;
+  font-size: 2em;
+  font-weight: light;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.buscadorAvanzado {
+
+    height: 100vh;
+    background-image: url('../img/fondobuscador.jpg');
+    background-size: cover;
+    background-repeat: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
 
 
 
@@ -73,12 +98,12 @@ footer{
   background-color: white;
   justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0px;
   border-top: 2px solid #0C2440;
 }
 
 .logo img{
-  max-width: 75px;
+  max-width: 60px;
 }
 
 .logo{
