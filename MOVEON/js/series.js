@@ -75,13 +75,13 @@ fetch(URL_DETALLE)
    var detalleSerie = document.querySelector('.detalle-serie');
 
    if (data.poster_path) {
-     detalleSerie.innerHTML += '<img src=“https://image.tmdb.org/t/p/original' + data.poster_path + '" >'
+     detalleSerie.innerHTML += '  <img src="https://image.tmdb.org/t/p/original`+ data.poster_path+`" alt="">'
    }
-
    detalleSerie.innerHTML += "<h2>"+ data.name + "</h2>";
-   detalleSerie.innerHTML += "<h4>Overview:</h4><p>" + data.overview + "</p>";
-   detalleSerie.innerHTML += "<h4>On air since:</h4><p>" + data.first_air_date + "</p>";
-   detalleSerie.innerHTML += "<h4>Original language:</h4><p>"+ data.original_language + "</p> ";
+
+   detalleSerie.innerHTML += "<h4>Sinopsis:</h4><p>" + data.overview + "</p>";
+   detalleSerie.innerHTML += "<h4>Al aire desde:</h4><p>" + data.first_air_date + "</p>";
+   detalleSerie.innerHTML += "<h4>Idioma Original:</h4><p>"+ data.original_language + "</p> ";
  })
  .catch(function (error) {
    console.log(error);
