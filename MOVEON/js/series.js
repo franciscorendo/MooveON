@@ -75,14 +75,56 @@ fetch(URL_DETALLE)
    var detalleSerie = document.querySelector('.detalle-serie');
 
    if (data.poster_path) {
-     detalleSerie.innerHTML += '  <img src="https://image.tmdb.org/t/p/original`+ data.poster_path+`" alt="">'
+     detalleSerie.innerHTML += '<img src="https://image.tmdb.org/t/p/w500/'+ data.poster_path + '">'
    }
    detalleSerie.innerHTML += "<h2>"+ data.name + "</h2>";
 
    detalleSerie.innerHTML += "<h4>Sinopsis:</h4><p>" + data.overview + "</p>";
    detalleSerie.innerHTML += "<h4>Al aire desde:</h4><p>" + data.first_air_date + "</p>";
    detalleSerie.innerHTML += "<h4>Idioma Original:</h4><p>"+ data.original_language + "</p> ";
+
  })
  .catch(function (error) {
    console.log(error);
+
  })
+ // fetch(`https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=${API_KEY}&language=en-US`)
+ //   .then(function (response) {
+ //     return response.json();
+ //   })
+ //   .then(function(data) {
+ //     console.log(data);
+ //     // cosas para meter en el html el contenido
+ //     var trailerSerie = document.querySelector('.trailers');
+ //     var trailer = data.results;
+ //     for (var i = 0; i < trailer.length; i++) {
+ //      trailerSerie.innerHTML  = '<iframe width="560" height="315"src="https://www.youtube.com/embed'+ data.results[i].key + '"></iframe>'
+
+ //fetch(`https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=${API_KEY}&language=en-US`)
+//  .then(function (response) {
+  //  return response.json();
+//  })
+//  .then(function (data) {
+//    console.log(data);
+    // cosas para meter en el html el contenido
+  //  var detalleSerie = document.querySelector('.trailers');
+  //  var trailer = data.results;
+  //  for(var i = 0; i < trailer.length; i++) {
+  //    detalleSerie.innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + data.results[idSerie].key +'"></iframe>'
+  //  }
+  //})
+  //var url = "https://api.themoviedb.org/3/movie/ "+idPelicula+"/videos?api_key=a3f9467ae2c29b7ede89cca0ca14d893&language=en-US"
+  fetch("https://api.themoviedb.org/3/tv/{tv_id}/videos?api_key=a3f9467ae2c29b7ede89cca0ca14d893&language=en-US")
+    .then(function(response){
+      return response.json();
+      })
+      .then(function(peliculaTrailer) {
+       console.log(peliculaTrailer);
+       console.log(peliculaTrailer.results[0].key);
+        var urlTrailer= '<iframe width="850" height="472" src="https://www.youtube.com/embed/'+ peliculaTrailer.results[0].key +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        document.querySelector(".detalle-serie").innerHTML= urlTrailer;
+
+        })
+         .catch(function(error) {
+           console.log("the error was: " + error);
+          })
