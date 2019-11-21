@@ -1,59 +1,50 @@
-window.addEventListner("load", function(){
+window.onload = function(){
+  var anioDeEstreno = document.querySelector(".anio")
+  var opcionesFe;
+console.log(anioDeEstreno);
+  for (var i = 1950; i < 2020; i++) {
+    opcionesFe = '<option>'
+    opcionesFe +=   i
+    opcionesFe += '</option>'
+    anioDeEstreno.innerHTML += opcionesFe
+
+  }
+  var generoID = new URLSearchParams(location.search).get('idGenero');
+  var li ;
+  //Esto revisa las condiciones para ejecutar la busqueda
+  var buscador = document.querySelector(".buscadorAvanzado");
+  var input = document.querySelector("form.buscador input");
+  buscador.onsubmit = function(event){
+    if (input.value == "") {
+      event.preventDefault();
+    } else if (input.value.length < 3) {
+      event.preventDefault();
+      alert("Debe haber un minimo de 3 letras para buscar");
+    }
+  }
+
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=a3f9467ae2c29b7ede89cca0ca14d893&language=en-US")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(respuesta){
-    var series = respuesta.generes;
-    for(var i=0; i < series.length; i++){
-      document.querySelector("select.opcionesGenero").innerHTML += "<option value" + series[i].id + ">" + series[i].name + "</option>"
-      document.querySelector("select.excluir").innerHTML += "<option value=" + series[i].id + ">" + series[i].name + "<option>"
-    }
-  })
-// Agregar ordenar por parrafos
-
-  var query = new URLSearchParams (location.search)
-
-  var genero = query.get('genero')
-  if(genero != null){
-    genero = '&with_genres' + genero
-  }else{
-    genero = ""
-  }
-
-  var excluir = query.get('excluir')
-  if (excluir != null){
-    excluir = '&without_genres' + excluir
-  } else{
-    excluir = ""
-  }
-  var orden = query.get('orden')
-
-  if(orden!= null){
-    orden = '&sort_bye' + orden
-  } else{
-    orden = ""
-  }
-
-  var year = query.get('year')
-  if(year != null){
-    year = "&first_air_date_year" + year
-  }else {
-    year = ""
-  }
-
-  fetch("https://api.themoviedb.org/3/discover/tv?api_key=a3f9467ae2c29b7ede89cca0ca14d893" + genero + excluir + orden + year)
-  .then(function(response){
-    return response.json();
-  })
-  .then(function(respuesta){
-    console.log(respuesta);
-    var series = respuesta.results;
-    document.querySelector("h2.title").innerText = "Respuesta de la busqueda avanzada";
-    for (var i = 0; i < series.length; i++) {
-      if(series[i].poster_path != null) {
-        document.querySelector("div#busqueda").innerHTML += "<div class='pelis'><img src='https://image.tmdb.org/t/p/w300" + series[i].poster_path +"'></div>";
+    .then(function(respuesta) {
+      return respuesta.json()
+      console.log(respuesta);
+    })
+  //ahora agarra en especial los generos y traelos como arrays infinitos
+    .then(function(informacion) {
+      var arrayGeneros = informacion.genres
+      for (var i = 0; i < arrayGeneros.length; i++) {
+        var nombre = arrayGeneros[i].name
+        var opciones;
+  //estructura que va a linkear donde posicionarlos
+        opciones = '<option>'
+        opciones +=   nombre
+        opciones += '</option>'
+  //estilo selector para los genros
+        document.querySelector(".buscincl").innerHTML += opciones
+        document.querySelector(".buscexcl").innerHTML += opciones
       }
-    }
-  })
-})
+
+    })
+    .catch(function(error) {
+      console.log("Error: " + error);
+    })
+  }

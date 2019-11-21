@@ -12,8 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/uikit.min.css">
-    <link rel="stylesheet" href="./js/uikit.min.js">
-    <link rel="stylesheet" href="./js/uikit-icons.js">
+    <link type="text/javascript" href="./js/uikit.min.js">
+    <link type="text/javascript" href="./js/uikit-icons.js">
 
     <link rel="stylesheet" href="./css/busquedaAvanzada.css">
     <!--UIkit JS-->
@@ -60,25 +60,26 @@
       <h3> Busqueda Avanzada </h3>
 
       <form class="form-avanzado" action="resultadoavanzado.html" method="get">
-        <p class="busqueda"> Genero a Incluir: </p>
+        <p class="busqueda "> Genero a Incluir: </p>
 
         <div>
           <div class="uk-margin">
-          <select class="uk-select">
+          <select class="uk-select buscincl" name="incluir">
 
               <option></option>
 
           </select>
       </div>
-
+      <div class="uk-margin">
         <p class="busqueda"> Genero a Excluir: </p>
-        <select class="uk-select">
+        <select class="uk-select buscexcl" name="excluir">
             <option></option>
-            
+
 
         </select>
+        </div>
         <br> <p class="busqueda"> Ordenar por: </p>
-        <select class="uk-select">
+        <select class="uk-select" name="orden">
           <option value=""></option>
 
           <option value="vote_average.desc"> Mas Votados desc. </option>
@@ -89,12 +90,12 @@
           <option value="popularity.asc"> Popularidad asc. </option>
 
         </select>
+        <label for="">anio de estreno</label>
+        <select class="anio" name="anioElegido" >
 
-        <br> <p> Año de estreno: </p>
+        </select>
 
-        <div class="uk-margin">
-            <input class="uk-input" type="text" placeholder="Año de Estreno">
-        </div>
+
         <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">Buscar</button>
 
         </div>
@@ -113,6 +114,7 @@
 
     </footer>
     <!--FIN Footer-->
-  <script rel="stylesheet" src="./js/busquedaAvanzada.js"></script>
+  <script type="text/javascript" src="./js/busquedaAvanzada.js"></script>
+  <script type="text/javascript" src="./js/validacionBuscador2.js"></script>
   </body>
 </html>
