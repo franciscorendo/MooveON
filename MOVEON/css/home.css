@@ -14,6 +14,7 @@ body{
 
 }
 
+
 .links{
   text-decoration: none;
   color: black;
@@ -53,6 +54,13 @@ border: 1px solid gray;
   color:white;
     height: 8vh;
 }
+
+#formlogin{
+  display: flex;
+  align-items: center;
+ left: auto;
+}
+
 
 
 

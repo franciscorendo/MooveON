@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>SERION</title>
+      <script rel="stylesheet" src="./js/login.js"></script>
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
 
@@ -24,6 +25,40 @@
                   <li class="uk-active"><a href="home.html"><img class="nav-logo" src="./img/serionlogo.jpg"></a></li>
 
               </ul>
+          </div>
+          <div>
+            <form id="formlogin" action="">
+
+                <div class="uk-margin">
+                  <div class="uk-inline uk-width-2-3">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input class="uk-input" type="text" id="name">
+                  </div>
+                </div>
+
+                <div class="uk-margin">
+                  <div class="uk-inline uk-width-2-3">
+                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                    <input class="uk-input" type="text" id="email">
+                  </div>
+                </div>
+
+                <div class="uk-margin">
+                  <div class="uk-inline uk-width-2-3">
+
+                  <select class="uk-select" id="genero">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Undefined</option>
+                  </select>
+                </div>
+                </div>
+
+
+                <button  type="submit" name="button">Subscribe</button>
+
+              </form>
+
           </div>
           <div class="uk-navbar-center">
               <ul class="uk-navbar-nav">
@@ -50,6 +85,8 @@
               </form>
           </div>
           </div>
+          
+
       </nav>
     <!-- Esta es la barra de navegacion -->
 
@@ -126,7 +163,13 @@
 <p>Fini Quirno</p>
 
   </footer>
+<<<<<<< Updated upstream
   <script type="text/javascript" src="./js/validacionBuscador2.js"></script>
   <script type="text/javascript" src="./js/home.js"></script>
+=======
+
+  <script rel="stylesheet" src="./js/home.js"></script>
+
+>>>>>>> Stashed changes
     </body>
 </html>
