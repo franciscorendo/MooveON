@@ -79,9 +79,10 @@ fetch(URL_DETALLE)
    }
    detalleSerie.innerHTML += "<h2>"+ data.name + "</h2>";
 
-   detalleSerie.innerHTML += "<h4>Sinopsis:</h4><p>" + data.overview + "</p>";
-   detalleSerie.innerHTML += "<h4>Al aire desde:</h4><p>" + data.first_air_date + "</p>";
-   detalleSerie.innerHTML += "<h4>Idioma Original:</h4><p>"+ data.original_language + "</p> "
+   detalleSerie.innerHTML += "<h4>Sinopsis:</h4> <p>" + data.overview + "</p>";
+   
+   detalleSerie.innerHTML += "<h4>Al aire desde:</h4> <p>" + data.first_air_date + "</p>";
+   detalleSerie.innerHTML += "<h4>Idioma Original:</h4> <p>"+ data.original_language + "</p> "
    if (data.genres == "undefined") {
 
    }

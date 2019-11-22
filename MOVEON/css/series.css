@@ -50,47 +50,46 @@ border: 1px solid gray;
   color:white;
     height: 8vh;
 }
-.posterSerie img{
-  min-width: 80%;
-  min-height: 60vh;
-}
 
-.infoDeSerie iframe{
-  min-width: 100%;
-  min-height: 100%;
-}
-
-  .poster_path {
-  justify-content: space-around;
-  align-items: center;
-  width: 40%;
-  height: 30%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-div.infoDeSerie {
-  justify-content: space-around;
-  align-items: center;
-  width: 59.2%;
-  height: 100%;
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/*header*/
+/*body*/
+body{
+  background-color:lightgrey;
 
 }
+.detalles h2{
+color: white;
+font-family: sans-serif;
+font-size: 5em;
+margin-left: 3%;
 
-.detalle-Serie {
-  background-color: white;
+}
+.detalle-serie img{
+  height: 30rem;
+  margin-left: 2%;
+  float: left;
+  overflow: hidden;
+}
+
+
+.detalle-serie h4{
+font-family: sans-serif;
+color: white;
+font-size: 2rem;
+margin-left: 3%;
+}
+.detalle-serie p{
+  color: white;
   font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: grey;
-  width: 100%;
+  font-size: 20px;
+  margin-left: 3%;
 }
+.detalle-serie{
+width: 94%;
+margin-left: 3%;
+
+}
+
 
 /* estilos del body */
 
