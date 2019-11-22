@@ -29,5 +29,5 @@ fetch("https://api.themoviedb.org/3/search/tv?api_key=a3f9467ae2c29b7ede89cca0ca
    console.log("Error: " + error);
  })
 
- 
+
 }

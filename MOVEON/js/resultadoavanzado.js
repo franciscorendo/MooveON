@@ -20,7 +20,7 @@ window.addEventListener('load',function(){
 
     var arrayDeSeries = datos.results
     console.log(arrayDeSeries);
-    var ul = document.querySelector('.resultados')
+    var ul = document.querySelector('.ul-fotos')
     var li = ""
      //parte fija img
      var urlIMG = "https://image.tmdb.org/t/p/original/"
