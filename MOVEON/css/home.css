@@ -40,7 +40,8 @@ z-index: 9;
     z-index: 3;
     flex-direction: row;
     border-bottom: none;
-    position: absolute;
+    
+
   }
 
   .menu{
