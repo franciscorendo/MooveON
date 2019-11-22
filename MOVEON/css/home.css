@@ -15,9 +15,7 @@ body{
   flex-direction: row;
 
 }
-.nav-logo{
-  margin-left: 420px;
-}
+
 
 .contenedorBuscador {
 position: absolute;
