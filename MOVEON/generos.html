@@ -23,6 +23,7 @@
                 <li class="uk-active"><a href="home.html"><img class="nav-logo" src="./img/serionlogo.jpg"></a></li>
             </ul>
         </div>
+
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav">
               <li class="li-line">
@@ -39,7 +40,52 @@
                 <li class="li-line">
                   <a class="li-a" href="busquedaAvanzada.html">Buscador Avanzado</a>
                 </li>
+                <li class="li-line">
+                  <a href="#modal-example" uk-toggle>Login</a>
+                </li>
             </ul>
+        </div>
+        <div id="modal-example" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+              <div>
+                <p>Log In</p>
+
+                <form id="formlogin" action="">
+
+                  <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                      <span class="uk-form-icon" uk-icon="icon: user"></span>
+                      <input class="uk-input" type="text" id="name">
+                    </div>
+                  </div>
+
+                  <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                      <input class="uk-input" type="text" id="email">
+                    </div>
+                  </div>
+
+                  <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+
+                    <select class="uk-select" id="genero">
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Undefined</option>
+                    </select>
+                  </div>
+                  </div>
+
+
+                  <p class="uk-text-right">
+                    <button  type="submit" name="button">Subscribe</button>
+                  </p>
+
+
+                </form>
+              </div>
+            </div>
         </div>
         <div class="contenedorBuscador">
           <form method="get" name="buscar" action="buscador.html" class="buscar">
