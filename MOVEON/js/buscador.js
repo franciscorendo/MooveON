@@ -41,7 +41,7 @@ for (var i=0; i < arrayDeSeries.length; i++){
 }
 })
 
-/todo esto esta explicado en otros javas.
+//todo esto esta explicado en otros javas.
 window.onload = function() {
  var queryString = new URLSearchParams(location.search)
  var busco = queryString.get("buscador")
