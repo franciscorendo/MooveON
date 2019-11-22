@@ -33,9 +33,10 @@ console.log(anioDeEstreno);
       var arrayGeneros = informacion.genres
       for (var i = 0; i < arrayGeneros.length; i++) {
         var nombre = arrayGeneros[i].name
+        var id = arrayGeneros[i].id
         var opciones;
   //estructura que va a linkear donde posicionarlos
-        opciones = '<option>'
+        opciones = '<option value="'+id+'">'
         opciones +=   nombre
         opciones += '</option>'
   //estilo selector para los genros
