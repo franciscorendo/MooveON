@@ -40,7 +40,7 @@ z-index: 9;
     z-index: 3;
     flex-direction: row;
     border-bottom: none;
-    
+
 
   }
 
@@ -175,7 +175,9 @@ z-index: 9;
   margin-top: 10px;
   justify-content: space-between;
 }
-
+.uk-navbar-center menu{
+  justify-content: center;
+}
 .sliders{
 
   background-color: white;
